@@ -4,58 +4,106 @@
 
 body {
   margin: 0;
-  background: #0e0e0e;
-  color: #f2f2f2;
-  font-family: system-ui, sans-serif;
+  background: #ffffff;
+  color: #111;
+  font-family: 'Source Serif 4', serif;
 }
 
-.top {
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #222;
-}
-
-.top h1 {
-  margin: 0;
-  font-size: 1.4rem;
-}
-
-.top p {
-  margin: 6px 0 0;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-.feed {
-  max-width: 480px;
-  margin: auto;
-}
-
-section {
+/* Top nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
   padding: 16px;
-}
-
-section h2 {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  color: #bbb;
-}
-
-.card {
-  background: #161616;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 14px;
-}
-
-.card h3 {
-  margin: 0 0 8px;
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
 }
 
-.card p {
+.nav-right span {
+  margin-left: 14px;
+}
+
+/* Layout */
+.container {
+  max-width: 520px;
+  margin: auto;
+  padding: 0 16px 40px;
+}
+
+/* Hero */
+.hero {
+  padding: 40px 0 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #ddd;
+  font-weight: 600;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Sections */
+.section {
+  margin-top: 36px;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Stories */
+.story {
+  margin-bottom: 22px;
+}
+
+.story h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 6px 0 6px;
+}
+
+.story p {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+  color: #222;
+}
+
+/* Lead story */
+.lead h3 {
+  font-size: 1.6rem;
+}
+
+/* Metadata */
+.meta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
 }
