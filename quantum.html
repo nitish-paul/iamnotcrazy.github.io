@@ -52,31 +52,45 @@ config:
   theme: neutral
 ---
 flowchart TD
-    A[1900–1930s<br/>Quantum Mechanics<br/>Planck, Heisenberg, Schrödinger] -->|Foundations| B[1981<br/>Feynman<br/>Simulating Physics with Computers]
+    A[Quantum Computing]
 
-    B -->|Quantum simulation| C[1985<br/>Deutsch<br/>Universal Quantum Computer]
+    %% Main branches
+    A --> B[Quantum Tomography]
+    A --> C[Quantum Error Correction]
+    A --> D[Quantum Machine Learning]
+    A --> E[Experimental Platforms]
+    A --> F[Quantum Algorithms]
 
-    C -->|Algorithms| D[1994<br/>Shor<br/>Factoring & Discrete Log]
+    %% Tomography
+    B --> B1[Paris & Rehacek<br/>Quantum State Estimation]
+    B --> B2[Gross et al. 2010<br/>Compressed Sensing QST]
+    B --> B3[Torlai et al. 2018<br/>Neural Network QST]
 
-    D -->|Speedup| E[1996<br/>Grover<br/>Quantum Search Algorithm]
+    %% Error correction
+    C --> C1[Shor 1995<br/>Quantum Error-Correcting Codes]
+    C --> C2[Steane 1996<br/>Error Correcting Codes]
+    C --> C3[Kitaev 2003<br/>Surface Codes]
+    C --> C4[Fowler et al. 2012<br/>Fault-Tolerant QC]
 
-    E -->|Noise problem| F[1995–1997<br/>Shor, Steane<br/>Quantum Error Correction]
+    %% Quantum ML
+    D --> D1[Peruzzo et al. 2014<br/>VQE]
+    D --> D2[Farhi et al. 2014<br/>QAOA]
+    D --> D3[Schuld et al. 2019<br/>Quantum Kernels]
+    D --> D4[McClean et al. 2018<br/>Barren Plateaus]
+    D --> D5[Stokes et al. 2020<br/>Quantum Natural Gradient]
 
-    F -->|Fault tolerance| G[1998–2005<br/>Cory et al.<br/>Early QC Experiments]
+    %% Experimental platforms
+    E --> E1[Cirac & Zoller 1995<br/>Ion Traps]
+    E --> E2[Devoret & Schoelkopf 2013<br/>Superconducting Qubits]
+    E --> E3[Arute et al. 2019<br/>Google Sycamore]
+    E --> E4[Henriet et al. 2020<br/>Neutral Atoms]
 
-    G -->|New model| H[2003<br/>Raussendorf & Briegel<br/>MBQC / Cluster States]
+    %% Algorithms
+    F --> F1[Deutsch & Jozsa 1992<br/>DJ Algorithm]
+    F --> F2[Shor 1994<br/>Factoring]
+    F --> F3[Grover 1996<br/>Search Algorithm]
+    F --> F4[Harrow-Hassidim-Lloyd 2009<br/>HHL Algorithm]
 
-    H -->|Hardware focus| I[2009–2014<br/>NISQ Era<br/>Preskill]
-
-    I -->|Hybrid methods| J[2014<br/>Peruzzo et al.<br/>VQE<br/>Farhi et al.<br/>QAOA]
-
-    J -->|Sampling task| K[2019<br/>Arute et al.<br/>Quantum Supremacy]
-
-    K -->|Learning limits| L[2020–2022<br/>McClean et al.<br/>Barren Plateaus]
-
-    L -->|Scaling| M[2023–2025<br/>Surface Codes<br/>Logical Qubits]
-
-    M -->|Goal| N[Fault-Tolerant<br/>Scalable Quantum Computing]
     </div>
 
     <p>
