@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Research Post</title>
+  <title>The Research Post · Quantum Timeline</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "neutral"
+    });
+  </script>
 </head>
 
 <body>
@@ -27,76 +36,54 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>ThePost</h1>
-    <p class="tagline">Research, distilled without noise</p>
+    <h1>Quantum Computing</h1>
+    <p class="tagline">A timeline of ideas, not just dates</p>
   </section>
 
   <hr>
 
-  <!-- Spotlight -->
+  <!-- Timeline -->
   <section class="section">
-    <h2>In The Spotlight</h2>
+    <h2>Conceptual Timeline</h2>
 
-    <article class="story lead">
-      <span class="meta">Dec 19 · Reinforcement Learning</span>
-      <h3>Reinforcement Learning: A Clean Overview</h3>
-      <p>
-        Reinforcement learning studies how agents learn through interaction.
-        Policies map states to actions, rewards guide improvement,
-        and value functions estimate long-term return.
-      </p>
-    </article>
-  </section>
+    <div class="mermaid">
+      flowchart LR
 
-  <!-- Latest Research -->
-  <section class="section">
-    <h2>Latest Research</h2>
+        subgraph Y1982["1982"]
+          Feynman["Feynman proposes quantum simulation"]
+        end
 
-    <article class="story">
-      <span class="meta">arXiv · Quantum Computing</span>
-      <h3>Quantum Flow Matching Without Known Initial States</h3>
-      <p>
-        Recent work attempts to bypass explicit density matrix initialization
-        by sampling observable trajectories.
-      </p>
-    </article>
+        subgraph Y1994["1994"]
+          Shor["Shor's factoring algorithm"]
+        end
 
-    <article class="story">
-      <span class="meta">ICLR · Machine Learning</span>
-      <h3>Why Flow Matching Competes With Diffusion</h3>
-      <p>
-        Deterministic training objectives remove stochastic sampling
-        while preserving generative performance.
-      </p>
-    </article>
-  </section>
+        subgraph Y1996["1996"]
+          Grover["Grover search algorithm"]
+        end
 
-  <!-- Quantum -->
-  <section class="section">
-    <h2>Quantum Computing</h2>
+        subgraph Y2000["2000s"]
+          QEC["Quantum error correction"]
+        end
 
-    <article class="story">
-      <span class="meta">Concept</span>
-      <h3>What Is a Lindbladian?</h3>
-      <p>
-        Lindblad operators govern open quantum system dynamics,
-        extending Hamiltonian evolution to noisy environments.
-      </p>
-    </article>
-  </section>
+        subgraph Y2014["2014"]
+          VQA["Variational quantum algorithms"]
+        end
 
-  <!-- ML -->
-  <section class="section">
-    <h2>Machine Learning</h2>
+        subgraph Y2018["2018+"]
+          NISQ["NISQ-era algorithms"]
+        end
 
-    <article class="story">
-      <span class="meta">Overview</span>
-      <h3>Policy Gradients in One Page</h3>
-      <p>
-        Policy gradients optimize expected reward directly
-        by differentiating through action probabilities.
-      </p>
-    </article>
+        Feynman --> Shor
+        Shor --> Grover
+        Grover --> QEC
+        QEC --> VQA
+        VQA --> NISQ
+    </div>
+
+    <p>
+      This timeline highlights conceptual shifts rather than hardware milestones.
+      Edges indicate intellectual lineage, not mere chronology.
+    </p>
   </section>
 
 </main>
