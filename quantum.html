@@ -54,34 +54,61 @@ config:
 flowchart TD
     A[Quantum Computing]
 
-    A --> B[Quantum Tomography]
-    B --> B1[Paris & Rehacek<br/>Quantum State Estimation]
-    B1 --> B2[Gross et al. 2010<br/>Compressed Sensing QST]
-    B2 --> B3[Torlai et al. 2018<br/>Neural Network QST]
+    %% Level 1
+    A --> T[Quantum Tomography]
 
-    B3 --> C[Quantum Error Correction]
-    C --> C1[Shor 1995<br/>QEC Codes]
-    C1 --> C2[Steane 1996<br/>QEC Codes]
-    C2 --> C3[Kitaev 2003<br/>Surface Codes]
-    C3 --> C4[Fowler et al. 2012<br/>Fault Tolerance]
+    %% Tomography sub-chain
+    T --> T1[Quantum State Tomography]
+    T1 --> T1a[Paris & Řeháček<br/>Quantum State Estimation]
+    T1a --> T1b[Gross et al. 2010<br/>Compressed Sensing QST]
+    T1b --> T1c[Torlai et al. 2018<br/>Neural-Network QST]
 
-    C4 --> D[Quantum Machine Learning]
-    D --> D1[Peruzzo et al. 2014<br/>VQE]
-    D1 --> D2[Farhi et al. 2014<br/>QAOA]
-    D2 --> D3[McClean et al. 2018<br/>Barren Plateaus]
-    D3 --> D4[Stokes et al. 2020<br/>Quantum Natural Gradient]
+    %% Level 1 continues
+    T1c --> E[Quantum Error Correction]
 
-    D4 --> E[Experimental Platforms]
-    E --> E1[Cirac & Zoller 1995<br/>Ion Traps]
-    E1 --> E2[Devoret & Schoelkopf 2013<br/>Superconducting Qubits]
-    E2 --> E3[Arute et al. 2019<br/>Google Sycamore]
-    E3 --> E4[Henriet et al. 2020<br/>Neutral Atoms]
+    %% Error correction sub-chain
+    E --> E1[Quantum Error-Correcting Codes]
+    E1 --> E1a[Shor 1995<br/>QEC Codes]
+    E1a --> E1b[Steane 1996<br/>CSS Codes]
+    E1b --> E1c[Kitaev 2003<br/>Surface Codes]
+    E1c --> E1d[Fowler et al. 2012<br/>Fault Tolerance]
 
-    E4 --> F[Quantum Algorithms]
-    F --> F1[Deutsch–Jozsa 1992]
-    F1 --> F2[Shor 1994]
-    F2 --> F3[Grover 1996]
-    F3 --> F4[HHL 2009]
+    %% Level 1 continues
+    E1d --> QML[Quantum Machine Learning]
+
+    %% QML sub-chain
+    QML --> Q1[Variational Circuits]
+    Q1 --> Q1a[Peruzzo et al. 2014<br/>VQE]
+    Q1a --> Q1b[Farhi et al. 2014<br/>QAOA]
+    Q1b --> Q1c[McClean et al. 2018<br/>Barren Plateaus]
+    Q1c --> Q1d[Stokes et al. 2020<br/>Quantum Natural Gradient]
+
+    %% Level 1 continues
+    Q1d --> X[Experimental Platforms]
+
+    %% Experimental sub-chain
+    X --> X1[Ion Traps]
+    X1 --> X1a[Cirac & Zoller 1995]
+    X1a --> X2[Superconducting Qubits]
+    X2 --> X2a[Devoret & Schoelkopf 2013]
+    X2a --> X3[Neutral Atoms]
+    X3 --> X3a[Henriet et al. 2020]
+    X3a --> X4[Quantum Supremacy]
+    X4 --> X4a[Arute et al. 2019]
+
+    %% Level 1 continues
+    X4a --> ALG[Quantum Algorithms]
+
+    %% Algorithms sub-chain
+    ALG --> A1[Deutsch–Jozsa Algorithm]
+    A1 --> A1a[Deutsch & Jozsa 1992]
+    A1a --> A2[Shor’s Algorithm]
+    A2 --> A2a[Shor 1994]
+    A2a --> A3[Grover Search]
+    A3 --> A3a[Grover 1996]
+    A3a --> A4[HHL Algorithm]
+    A4 --> A4a[Harrow–Hassidim–Lloyd 2009]
+
 
 
     </div>
