@@ -54,42 +54,35 @@ config:
 flowchart TD
     A[Quantum Computing]
 
-    %% Main branches
     A --> B[Quantum Tomography]
-    A --> C[Quantum Error Correction]
-    A --> D[Quantum Machine Learning]
-    A --> E[Experimental Platforms]
-    A --> F[Quantum Algorithms]
-
-    %% Tomography
     B --> B1[Paris & Rehacek<br/>Quantum State Estimation]
-    B --> B2[Gross et al. 2010<br/>Compressed Sensing QST]
-    B --> B3[Torlai et al. 2018<br/>Neural Network QST]
+    B1 --> B2[Gross et al. 2010<br/>Compressed Sensing QST]
+    B2 --> B3[Torlai et al. 2018<br/>Neural Network QST]
 
-    %% Error correction
-    C --> C1[Shor 1995<br/>Quantum Error-Correcting Codes]
-    C --> C2[Steane 1996<br/>Error Correcting Codes]
-    C --> C3[Kitaev 2003<br/>Surface Codes]
-    C --> C4[Fowler et al. 2012<br/>Fault-Tolerant QC]
+    B3 --> C[Quantum Error Correction]
+    C --> C1[Shor 1995<br/>QEC Codes]
+    C1 --> C2[Steane 1996<br/>QEC Codes]
+    C2 --> C3[Kitaev 2003<br/>Surface Codes]
+    C3 --> C4[Fowler et al. 2012<br/>Fault Tolerance]
 
-    %% Quantum ML
+    C4 --> D[Quantum Machine Learning]
     D --> D1[Peruzzo et al. 2014<br/>VQE]
-    D --> D2[Farhi et al. 2014<br/>QAOA]
-    D --> D3[Schuld et al. 2019<br/>Quantum Kernels]
-    D --> D4[McClean et al. 2018<br/>Barren Plateaus]
-    D --> D5[Stokes et al. 2020<br/>Quantum Natural Gradient]
+    D1 --> D2[Farhi et al. 2014<br/>QAOA]
+    D2 --> D3[McClean et al. 2018<br/>Barren Plateaus]
+    D3 --> D4[Stokes et al. 2020<br/>Quantum Natural Gradient]
 
-    %% Experimental platforms
+    D4 --> E[Experimental Platforms]
     E --> E1[Cirac & Zoller 1995<br/>Ion Traps]
-    E --> E2[Devoret & Schoelkopf 2013<br/>Superconducting Qubits]
-    E --> E3[Arute et al. 2019<br/>Google Sycamore]
-    E --> E4[Henriet et al. 2020<br/>Neutral Atoms]
+    E1 --> E2[Devoret & Schoelkopf 2013<br/>Superconducting Qubits]
+    E2 --> E3[Arute et al. 2019<br/>Google Sycamore]
+    E3 --> E4[Henriet et al. 2020<br/>Neutral Atoms]
 
-    %% Algorithms
-    F --> F1[Deutsch & Jozsa 1992<br/>DJ Algorithm]
-    F --> F2[Shor 1994<br/>Factoring]
-    F --> F3[Grover 1996<br/>Search Algorithm]
-    F --> F4[Harrow-Hassidim-Lloyd 2009<br/>HHL Algorithm]
+    E4 --> F[Quantum Algorithms]
+    F --> F1[Deutsch–Jozsa 1992]
+    F1 --> F2[Shor 1994]
+    F2 --> F3[Grover 1996]
+    F3 --> F4[HHL 2009]
+
 
     </div>
 
