@@ -107,3 +107,66 @@ hr {
   border-top: 1px solid #ddd;
   margin: 20px 0;
 }
+
+
+/* Grid for front page sections */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Clickable cards */
+.card {
+  display: block;
+  padding: 22px 20px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Card typography */
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #222;
+}
+
+.card-meta {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+/* Slightly widen layout on larger screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 760px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+
