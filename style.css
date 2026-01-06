@@ -173,6 +173,73 @@ hr {
   line-height: 1.4;
 }
 
+/* Paper cards */
+.paper-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paper-card {
+  padding: 28px 26px;
+  border-radius: 22px;
+}
+
+/* Soft tones */
+.tone-green {
+  background: #dfe7d3;
+}
+
+.tone-rose {
+  background: #ead9d8;
+}
+
+.tone-sand {
+  background: #efe9d6;
+}
+
+/* Meta row */
+.paper-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+/* Pill tag */
+.pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.08);
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+/* Date + level */
+.date,
+.level {
+  color: #333;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Title */
+.paper-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+/* Authors */
+.paper-authors {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+
 
 
 
