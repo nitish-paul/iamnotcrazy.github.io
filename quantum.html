@@ -1,4 +1,3 @@
-<!-- quantum.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quantum Computing — Research Map</title>
 
-  <!-- SAME CSS FILE AS MAIN PAGE -->
+  <!-- SAME CSS AS MAIN PAGE -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,124 +24,88 @@
     <div class="hero">
       <h1>Quantum Computing</h1>
       <div class="tagline">
-        A research-first map of core ideas and canonical papers
+        Core research directions and entry-point papers
       </div>
     </div>
 
-    <!-- Quantum Tomography -->
-    <div class="section">
-      <h2>Quantum Tomography</h2>
+    <div class="grid">
 
-      <div class="story">
-        <div class="meta">
-          State Tomography · Process Tomography · Compressed Sensing · ML
-        </div>
-        <h3>Quantum State Estimation</h3>
-        <p>Paris & Řeháček</p>
-      </div>
+      <!-- Quantum Tomography -->
+      <a class="card" href="quantum-tomography.html">
+        <h2>Quantum Tomography</h2>
+        <p>
+          Reconstructing quantum states, processes, and measurements from data.
+        </p>
+        <span class="card-meta">
+          State Tomography · Process Tomography · ML · Compressed Sensing
+        </span>
+        <span class="card-meta">
+          Paris & Řeháček · Gross et al. · Torlai et al.
+        </span>
+      </a>
 
-      <div class="story">
-        <h3>Quantum State Tomography via Compressed Sensing</h3>
-        <p>Gross et al., 2010</p>
-      </div>
-
-      <div class="story">
-        <h3>Neural-Network Quantum State Tomography</h3>
-        <p>Torlai et al., 2018</p>
-      </div>
-    </div>
-
-    <!-- Quantum Sensing -->
-    <div class="section">
-      <h2>Quantum Sensing</h2>
-
-      <div class="story">
-        <div class="meta">
+      <!-- Quantum Sensing -->
+      <a class="card" href="quantum-sensing.html">
+        <h2>Quantum Sensing</h2>
+        <p>
+          Using quantum systems as ultra-sensitive probes of fields and forces.
+        </p>
+        <span class="card-meta">
           NV Centers · Atomic Sensors · Weak Measurement
-        </div>
-        <h3>Quantum-Enhanced Sensing</h3>
-        <p>Giovannetti et al., 2011</p>
-      </div>
+        </span>
+        <span class="card-meta">
+          Giovannetti et al. · Degen et al.
+        </span>
+      </a>
 
-      <div class="story">
-        <h3>Quantum Metrology with NV Centers</h3>
-        <p>Degen et al., 2017</p>
-      </div>
-    </div>
-
-    <!-- Quantum Metrology -->
-    <div class="section">
-      <h2>Quantum Metrology</h2>
-
-      <div class="story">
-        <div class="meta">
+      <!-- Quantum Metrology -->
+      <a class="card" href="quantum-metrology.html">
+        <h2>Quantum Metrology</h2>
+        <p>
+          Fundamental limits of precision and how entanglement beats them.
+        </p>
+        <span class="card-meta">
           Heisenberg Limit · Phase Estimation · Entanglement
-        </div>
-        <h3>Quantum-Enhanced Measurements</h3>
-        <p>Giovannetti, Lloyd, Maccone, 2004</p>
-      </div>
+        </span>
+        <span class="card-meta">
+          Giovannetti–Lloyd–Maccone
+        </span>
+      </a>
 
-      <div class="story">
-        <h3>Quantum Limits to Measurement Precision</h3>
-        <p>Quantum Cramér–Rao Bound</p>
-      </div>
-    </div>
-
-    <!-- Quantum Error Correction -->
-    <div class="section">
-      <h2>Quantum Error Correction</h2>
-
-      <div class="story">
-        <div class="meta">
+      <!-- Quantum Error Correction -->
+      <a class="card" href="quantum-error-correction.html">
+        <h2>Quantum Error Correction</h2>
+        <p>
+          Protecting fragile quantum information against noise and decoherence.
+        </p>
+        <span class="card-meta">
           Stabilizer Codes · Surface Codes · Fault Tolerance
-        </div>
-        <h3>Scheme for Reducing Decoherence</h3>
-        <p>Shor, 1995</p>
-      </div>
+        </span>
+        <span class="card-meta">
+          Shor · Steane · Fowler et al.
+        </span>
+      </a>
 
-      <div class="story">
-        <h3>Error Correcting Codes in Quantum Theory</h3>
-        <p>Steane, 1996</p>
-      </div>
+      <!-- Quantum Machine Learning -->
+      <a class="card" href="quantum-machine-learning.html">
+        <h2>Quantum Machine Learning</h2>
+        <p>
+          Hybrid quantum–classical models for learning and optimization.
+        </p>
+        <span class="card-meta">
+          Variational Circuits · NISQ · Optimization
+        </span>
+        <span class="card-meta">
+          Peruzzo · Farhi · McClean · Stokes
+        </span>
+      </a>
 
-      <div class="story">
-        <h3>Surface Codes and Fault-Tolerant QC</h3>
-        <p>Fowler et al., 2012</p>
-      </div>
-    </div>
-
-    <!-- Quantum Machine Learning -->
-    <div class="section">
-      <h2>Quantum Machine Learning</h2>
-
-      <div class="story">
-        <div class="meta">
-          Variational Circuits · Hybrid Models · Optimization
-        </div>
-        <h3>A Variational Eigenvalue Solver</h3>
-        <p>Peruzzo et al., 2014</p>
-      </div>
-
-      <div class="story">
-        <h3>Quantum Approximate Optimization Algorithm</h3>
-        <p>Farhi et al., 2014</p>
-      </div>
-
-      <div class="story">
-        <h3>Barren Plateaus in Quantum Neural Networks</h3>
-        <p>McClean et al., 2018</p>
-      </div>
-
-      <div class="story">
-        <h3>Quantum Natural Gradient</h3>
-        <p>Stokes et al., 2020</p>
-      </div>
     </div>
 
   </main>
 
   <div class="footer">
-    quantum.html · part of the main research site
+    quantum.html · overview
   </div>
 
 </body>
