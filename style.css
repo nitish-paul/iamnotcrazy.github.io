@@ -119,13 +119,13 @@ hr {
 /* Clickable cards */
 .card {
   display: block;
-  padding: 22px 20px;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  background: #fafafa;
+  padding: 28px 26px;
+  border: none;
+  border-radius: 22px;
+  background: #efe9d6; /* soft editorial default */
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease;
 }
 
 .card:hover {
@@ -134,27 +134,28 @@ hr {
 }
 
 /* Card typography */
+/* Editorial card aesthetic */
+
+/* Typography tuning */
 .card h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  margin: 0 0 8px;
-  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.25;
 }
 
 .card p {
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
   color: #222;
 }
 
+/* Meta line as subtle pills */
 .card-meta {
   display: block;
-  margin-top: 12px;
+  margin-top: 14px;
+  font-family: monospace;
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #666;
+  letter-spacing: 0.04em;
+  color: #333;
 }
 
 /* Slightly widen layout on larger screens */
