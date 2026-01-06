@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quantum Tomography</title>
+
+  <!-- SAME CSS AS MAIN PAGE -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- tiny local additions (safe, scoped) -->
+  <style>
+    .filters {
+      margin: 24px 0 32px;
+      font-size: 0.85rem;
+    }
+
+    .filters label {
+      margin-right: 14px;
+      cursor: pointer;
+    }
+
+    .filters strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div>Quantum</div>
+    <div class="nav-right">
+      <span>Tomography</span>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <div class="hero">
+      <h1>Quantum Tomography</h1>
+      <div class="tagline">
+        Reconstructing quantum states, processes, and measurements from data
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <strong>Filter by subtopic</strong>
+      <label><input type="checkbox" value="state" checked> State</label>
+      <label><input type="checkbox" value="process" checked> Process</label>
+      <label><input type="checkbox" value="ml" checked> Machine Learning</label>
+      <label><input type="checkbox" value="cs" checked> Compressed Sensing</label>
+
+      <strong style="margin-top:16px;">Level</strong>
+      <label><input type="checkbox" value="basic" checked> Basic</label>
+      <label><input type="checkbox" value="advanced" checked> Advanced</label>
+      <label><input type="checkbox" value="recent" checked> Recent</label>
+    </div>
+
+    <!-- Papers -->
+
+    <div class="section">
+
+      <div class="story"
+           data-tags="state basic">
+        <div class="meta">State · Basic</div>
+        <h3>Quantum State Estimation</h3>
+        <p>Paris & Řeháček</p>
+      </div>
+
+      <div class="story"
+           data-tags="state cs advanced">
+        <div class="meta">State · Compressed Sensing · Advanced</div>
+        <h3>Quantum State Tomography via Compressed Sensing</h3>
+        <p>Gross et al., 2010</p>
+      </div>
+
+      <div class="story"
+           data-tags="state ml recent">
+        <div class="meta">State · Machine Learning · Recent</div>
+        <h3>Neural-Network Quantum State Tomography</h3>
+        <p>Torlai et al., 2018</p>
+      </div>
+
+      <div class="story"
+           data-tags="process advanced">
+        <div class="meta">Process · Advanced</div>
+        <h3>Quantum Process Tomography</h3>
+        <p>Chuang & Nielsen</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="footer">
+    quantum-tomography.html
+  </div>
+
+  <!-- Filtering logic -->
+  <script>
+    const checkboxes = document.querySelectorAll('.filters input');
+    const papers = document.querySelectorAll('.story');
+
+    function applyFilters() {
+      const active = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+      papers.forEach(paper => {
+        const tags = paper.dataset.tags.split(' ');
+        const visible = tags.some(tag => active.includes(tag));
+        paper.classList.toggle('hidden', !visible);
+      });
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
+  </script>
+
+</body>
+</html>
